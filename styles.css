@@ -1,0 +1,139 @@
+/* Custom styling for navbar */
+.navbar-brand {
+    font-size: 1.8rem;
+    margin-left: -15px;
+    color: white !important;  /* Accent color for the title */
+    animation: fadeInDown 1s ease-in-out; /* Brand fade-in effect */
+}
+
+.nav-item {
+    margin-right: -110px; /* Adjust this value as needed */
+    animation: fadeInRight 1s ease-in-out; /* Nav items slide in from the right */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffb648;  /* Accent color on hover */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color change */
+    transform: scale(1.05); /* Slightly enlarges the text on hover */
+}
+
+.navbar-custom {
+    background-color: black; /* Black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    animation: slideDown 0.7s ease-in-out; /* Navbar slides in from the top */
+}
+
+/* Hero section styling */
+.hero-section {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out; /* Hero section fades in */
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: 1; /* Keeps the video in the background */
+    opacity: 0.5;
+}
+.navvideo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Keeps the video in the background */
+    opacity: 0.4;
+}
+
+.content {
+    z-index: 1; /* Keeps the content in front of the video */
+    animation: fadeInUp 1.5s ease-in-out; /* Content fades in and slides up */
+}
+
+.hero-section h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: zoomIn 1.2s ease-in-out; /* Heading zooms in */
+}
+.hero-section h3 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px;
+    animation: zoomIn 1.2s ease-in-out; /* Heading zooms in */
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-in-out; /* Paragraph fades in with delay */
+}
+
+.btn-primary {
+    background-color: #333;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounceIn 2.5s ease; /* Button has a bounce-in effect */
+}
+
+.btn-primary:hover {
+    background-color: royalblue;
+    color: #fff;
+    transform: scale(1.1); /* Button slightly enlarges on hover */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
